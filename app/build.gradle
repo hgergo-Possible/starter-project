@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'androidx.navigation.safeargs'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
@@ -71,6 +72,7 @@ dependencies {
     // Test Dependencies
     testImplementation "junit:junit:${JUNIT_VERSION}"
     testImplementation "org.mockito:mockito-core:${MOCKITO_VERSION}"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
     testImplementation "com.google.truth:truth:${GOOGLE_TRUTH_VERSION}"
     testImplementation "pl.pragmatists:JUnitParams:${JUNIT_PARAMS_VERSION}"
     testImplementation "org.robolectric:robolectric:${ROBOLECTRIC_VERSION}"
@@ -79,6 +81,9 @@ dependencies {
     testImplementation "androidx.test.ext:junit:${ANDROIDX_TEST_JUNIT}"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${KOTLIN_COROUTINES_VERSION}"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:${KOTLIN_COROUTINES_VERSION}"
+    testImplementation "com.squareup.okhttp3:mockwebserver:$OKHTTP_VERSION"
+    kaptTest "com.google.dagger:dagger-compiler:${DAGGER_VERSION}"
+
 
     // Support library
     implementation "androidx.legacy:legacy-support-v4:${ANDROIDX_VERSION}"
@@ -86,11 +91,16 @@ dependencies {
     implementation "com.google.android.material:material:${ANDROIDX_VERSION}"
     implementation "androidx.cardview:cardview:${ANDROIDX_VERSION}"
     implementation "androidx.recyclerview:recyclerview:${ANDROIDX_VERSION}"
+    implementation "androidx.constraintlayout:constraintlayout:1.1.3"
 
     // Arch components
     implementation "androidx.lifecycle:lifecycle-runtime:${ANDROIDX_ARCHCOMPONENTS_VERSION}"
     implementation "androidx.lifecycle:lifecycle-extensions:${ANDROIDX_ARCHCOMPONENTS_VERSION}"
     kapt "androidx.lifecycle:lifecycle-compiler:${ANDROIDX_ARCHCOMPONENTS_VERSION}"
+
+    // Navigation Component
+    implementation "androidx.navigation:navigation-fragment-ktx:$NAV_VERSION"
+    implementation "androidx.navigation:navigation-ui-ktx:$NAV_VERSION"
 
     // Frameworks
     implementation "com.squareup.retrofit2:retrofit:${RETROFIT_VERSION}"

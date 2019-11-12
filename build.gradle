@@ -1,6 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    ext.NAV_VERSION = "2.1.0"
     allprojects {
         // increase number of javac logged errors so that dagger errors are always logged
         gradle.projectsEvaluated {
@@ -23,6 +24,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:${GRADLE_PLUGIN_VERSION}"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$NAV_VERSION"
     }
 }
 

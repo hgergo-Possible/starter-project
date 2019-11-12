@@ -1,9 +1,10 @@
 package com.possible.demo
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import dagger.android.support.DaggerAppCompatActivity
+import dagger.android.support.HasSupportFragmentInjector
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity(), HasSupportFragmentInjector {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

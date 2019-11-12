@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">DemoApplication</string>
+
+    <!-- general -->
+    <string name="something_went_wrong">Something went wrong, please retry!</string>
+    <string name="retry">Retry</string>
+
+    <!-- search user -->
+    <string name="search_user_hint">Type a username here</string>
+    <string name="search_user_no_followers_found">Sadly, no followers found for the given input</string>
+    <string name="search_user_no_repositories_found">The user seems to have no repositories</string>
+    <string name="search_user_waiting_for_user_input">Start typing to search for followers of a user</string>
+    <string name="search_user_no_such_user">No such user exists</string>
+
+    <!-- repositories -->
+    <string name="no_repositories_found">Seems the user has no repositories</string>
+    <string name="repository_name">Name: %1$s</string>
+    <string name="repository_language">Language: %1$s</string>
+    <string name="repositories_watcher_count">Watchers: %1$d</string>
 </resources>
